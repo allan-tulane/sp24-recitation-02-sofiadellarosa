@@ -3,6 +3,9 @@
 **Name (Team Member 1):**Sofia Della Rosa
 **Name (Team Member 2):**Jaimie Morris
 
+IMPORTANT: 
+**Tabulate does not work on this replit, but it is installed and works on my partners. That is the replit we worked on together, I copied work onto this repo. **
+
 In this recitation, we will investigate recurrences. 
 To complete this recitation, follow the instructions in this document. Some of your answers will go in this file, and others will require you to edit `main.py`.
 
