@@ -41,6 +41,11 @@ where $W(1) = 1$.
 - if f(n) == 1, W(n) is O(n)
 - if f(n) == log n, W(n) is log(n) * log(n)
 - if f(n) == n, W(n) is O(nlogn)
+
+When n is 200
+- if f(n) == 1, W(n) is 255
+- if f(n) == log n, W(n) is 351.3137522458472
+- if f(n) == n, W(n) is 1504
   
 assuming a = 1 and b = 2 
 | n  | 1 | log(n) | n  |
