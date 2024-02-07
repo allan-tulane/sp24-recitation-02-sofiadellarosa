@@ -23,7 +23,12 @@ def test_work():
   assert work_calc(10, 2, 2, lambda n: n + 2) == 50
   assert work_calc(10, 2, 2, lambda n: n % 2) == 10
   assert work_calc(30, 1, 2, lambda n: n * 2) == 111
-  #assert work_calc(1000, 1, 2, lambda n: n) == 10
+
+
+n = 200
+print(work_calc(n, 2, 2, lambda n: 1))
+print(work_calc(n, 2, 2, lambda n: math.log(n)))
+print(work_calc(n, 2, 2, lambda n: n))
 
 
 def test_compare_work():
@@ -32,26 +37,30 @@ def test_compare_work():
 
   # create work_fn1
   def work_fn1(n):
-    return work_calc(n, 2, 4, lambda n: 1)
+    return work_calc(n, 4, 2, lambda n: n) # linear
 
   # create work_fn2
   def work_fn2(n):
-    return work_calc(n, 2, 4, lambda n: n * n)
+    return work_calc(n, 4, 2, lambda n: n * n * n) # n^3
 
   pass
   res = compare_work(work_fn1, work_fn2)
-  #print(res)
+  print_results(res)
+
+test_compare_work()
 
 
 def test_compare_span():
   # create work_fn1
   def span_fn1(n):
-    return span_calc(n, 2, 4, lambda n: 1)
+    return span_calc(n, 4, 2, lambda n: n) 
 
   # create work_fn2
   def span_fn2(n):
-    return span_calc(n, 2, 4, lambda n: n * n)
+    return span_calc(n, 4, 2, lambda n: n * n * n)
 
-  pass
   res = compare_span(span_fn1, span_fn2)
-  pass
+  print_results(res)
+  #span
+
+test_compare_span()

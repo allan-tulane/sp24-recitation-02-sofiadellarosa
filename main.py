@@ -68,9 +68,9 @@ def span_calc(n, a, b, f):
   if n == 1:
     return 1
   else:
-    return (a * work_calc(n // b, a, b, f) + f(n))
-
-  pass
+    return (span_calc(n // b, a, b, f) + f(n)) 
+  #dont multiply by a - only evaluating longest branch not all nodes
+  #pass
 
 
 def compare_work(work_fn1,
